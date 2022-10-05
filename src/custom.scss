@@ -1,0 +1,73 @@
+// Override default variables before the import
+// you can open the bootstrap.scss module and check any available variables.
+$primary: #00484B;
+$secondary: #C5E4E7;
+$success: #3AC2B0;
+$light: #F3F7FD;
+$dark: #0F686D;
+$info: #9BAFAE;
+
+$warning: #b8c924;
+$danger: #d62518;
+
+//custom color to be mapped
+$accent : #da6d25;
+
+// this is used to map colors. change accordingly.
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  info: $info,
+  warning: $warning,
+  danger: $danger,
+  light: $light,
+  dark: $dark,
+// add any additional color below
+  accent: $accent,
+// now bg-accent,btn-accent,etc.. can be called
+);
+$enable-negative-margins: true;
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+@font-face {
+  font-family: "SpaceMono";
+  src: url("../assets/fonts/SpaceMono-Bold.ttf") format("truetype");
+}
+*{
+  font-family: 'SpaceMono';
+}
+.letterSpacing2{
+  letter-spacing: 0.2rem;
+}
+.letterSpacing5{
+  letter-spacing: 0.5rem;
+}
+.letterSpacing4{
+  word-spacing: 0.4rem;
+}
+.customFontSize{
+  font-size: 0.6rem;
+}
+input:focus {
+  outline:none;
+}
+.customBorder{
+  border: 13px solid white;
+}
+.customAnimation{
+  animation-name: animate;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+@media only screen and (min-width:600px) {
+  @keyframes animate {
+    0%{
+      margin: 100px;
+    }
+    100%{
+      display: none;
+    }
+  }
+}
